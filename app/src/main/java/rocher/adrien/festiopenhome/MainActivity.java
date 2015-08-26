@@ -80,11 +80,8 @@ public class MainActivity extends AppCompatActivity {
                 String presDv = cpDevice.getUdn();
                 String friendDv = cpDevice.getAttribute("Upnp.FriendlyName").getValue();
 
-                /*if (presDv.length() > 0) {
-                    Log.d("New Device", presDv);
-                }*/
-                if (friendDv.length() > 0) {
-                    Log.d("New Device", friendDv);
+                if (friendDv != null && presDv != null) {
+                    Log.d("New Device", friendDv + " " + presDv);
                 }
 
 //                DeviceFragment DvFrag = (DeviceFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_device);
